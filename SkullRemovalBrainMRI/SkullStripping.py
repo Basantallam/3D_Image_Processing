@@ -3,8 +3,9 @@ import nibabel as nib
 from ipywidgets import interact, interactive, IntSlider, ToggleButtons
 from medpy.io import load, save
 import matplotlib.pyplot as plt
-
 import seaborn as sns
+
+#this code assumes you have a 3D binary brain mask and an MRI scan, and simply extracts the brain based on given brain mask
 sns.set_style('darkgrid')
 
 for pa in range (1,31):
