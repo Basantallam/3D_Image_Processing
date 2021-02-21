@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 print("N4 bias correction runs.")
 inputImage = sitk.ReadImage("patient01/patient01_T2W.nii.gz")
 # maskImage = sitk.ReadImage("06-t1c_mask.nii.gz")
-maskImage = sitk.OtsuThreshold(inputImage,0,1,200) #Search threshold on google
+maskImage = sitk.OtsuThreshold(inputImage,0,1,200) #choose suitable threshold
 sitk.WriteImage(maskImage, "patient01/patient01_T2W1.nii.gz" )
 
 inputImage = sitk.Cast(inputImage,sitk.sitkFloat32)
